@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Recruiter Metadata -->
+  <title>Swasti Paras Jain | BTech Engineering Student | Software Developer</title>
+  <meta name="description" content="Portfolio of Swasti Paras Jain, a BTech engineering student interested in software development, problem solving and technology." />
+  <meta name="keywords" content="Swasti Paras Jain, Software Developer, BTech Computer Engineering, R.C. Patel Institute of Technology, Java, JavaScript, Python, React, Web Development, Accenture Candidate" />
+  <meta name="author" content="Swasti Paras Jain" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Swasti Paras Jain | BTech Engineering Student | Software Developer" />
+  <meta property="og:description" content="Portfolio of Swasti Paras Jain, a BTech engineering student passionate about software development, problem solving, and building practical technology solutions." />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Custom Corporate Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            corpNavy: {
+              DEFAULT: '#0F172A',
+              light: '#1E293B',
+              dark: '#020617',
+            },
+            corpPurple: {
+              DEFAULT: '#6366F1',
+              dark: '#4F46E5',
+              deep: '#7C3AED',
+              light: '#F5F3FF',
+              border: '#DDD6FE',
+            },
+            corpBlue: {
+              DEFAULT: '#2563EB',
+              light: '#EFF6FF',
+              border: '#BFDBFE',
+            },
+            corpSlate: {
+              50: '#F8FAFC',
+              100: '#F1F5F9',
+              200: '#E2E8F0',
+              300: '#CBD5E1',
+              400: '#94A3B8',
+              500: '#64748B',
+              600: '#475569',
+              700: '#334155',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-corpSlate-700 font-sans selection:bg-corpPurple-light selection:text-corpPurple-deep">
+
+  <!-- Interactive Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 px-5 py-3.5 rounded-lg bg-corpNavy text-white text-sm font-medium shadow-xl border border-corpSlate-700 transition-all duration-300 opacity-0 pointer-events-none translate-y-4 flex items-center space-x-3">
+    <i id="toast-icon" class="fas fa-check-circle text-emerald-400"></i>
+    <span id="toast-msg">Copied to clipboard!</span>
+  </div>
+
+  <!-- NAVIGATION BAR (Single-Page Navigation) -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-corpSlate-200 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand / Monogram -->
+      <a href="#hero" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-lg bg-corpPurple-light border border-corpPurple-border flex items-center justify-center text-corpPurple-deep font-bold text-sm tracking-wider group-hover:bg-corpPurple group-hover:text-white transition-colors duration-200">
+          SPJ
+        </div>
+        <div>
+          <span class="font-bold text-base sm:text-lg tracking-tight text-corpNavy block group-hover:text-corpPurple-dark transition">Swasti Paras Jain</span>
+          <span class="text-xs text-corpSlate-500 font-medium block">BTech Computer Engineering · 2028</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (Section Jumps) -->
+      <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-corpSlate-600">
+        <a href="#about" class="hover:text-corpPurple-dark transition py-1">About</a>
+        <a href="#skills" class="hover:text-corpPurple-dark transition py-1">Skills</a>
+        <a href="#projects" class="hover:text-corpPurple-dark transition py-1">Projects</a>
+        <a href="#hackathons" class="hover:text-corpPurple-dark transition py-1">Hackathons</a>
+      </nav>
+
+      <!-- Desktop CTA Header Actions -->
+      <div class="hidden sm:flex items-center space-x-3">
+        <a href="https://github.com/Swasti-jain16?tab=repositories" target="_blank" rel="noopener noreferrer" title="GitHub" class="w-9 h-9 rounded-lg border border-corpSlate-200 hover:border-corpPurple text-corpSlate-600 hover:text-corpPurple-dark flex items-center justify-center transition">
+          <i class="fab fa-github text-sm"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/swasti-jain-576506259" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="w-9 h-9 rounded-lg border border-corpSlate-200 hover:border-corpBlue text-corpSlate-600 hover:text-corpBlue flex items-center justify-center transition">
+          <i class="fab fa-linkedin-in text-sm"></i>
+        </a>
+        <a href="https://www.codechef.com/users/swasti_105jain" target="_blank" rel="noopener noreferrer" title="CodeChef" class="w-9 h-9 rounded-lg border border-corpSlate-200 hover:border-amber-500 text-corpSlate-600 hover:text-amber-600 flex items-center justify-center transition">
+          <i class="fas fa-code text-sm"></i>
+        </a>
+        <a href="cv.pdf" target="_blank" class="px-4 py-2 text-xs font-semibold rounded-lg bg-corpPurple-deep hover:bg-corpPurple-dark text-white flex items-center space-x-2 transition shadow-sm hover:shadow">
+          <i class="fas fa-file-pdf"></i>
+          <span>Download CV</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" aria-label="Toggle menu" class="lg:hidden text-corpSlate-700 hover:text-corpNavy focus:outline-none p-2 rounded-md hover:bg-corpSlate-100">
+        <i class="fas fa-bars text-lg"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer (Single-Page Anchor Jumps) -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-corpSlate-200 px-6 py-5 space-y-3 font-medium text-corpSlate-700 shadow-lg">
+      <a href="#about" class="block py-1 hover:text-corpPurple-dark">About Me</a>
+      <a href="#skills" class="block py-1 hover:text-corpPurple-dark">Skills</a>
+      <a href="#projects" class="block py-1 hover:text-corpPurple-dark">Projects</a>
+      <a href="#hackathons" class="block py-1 hover:text-corpPurple-dark">Hackathons & Innovation</a>
+      <div class="pt-3 border-t border-corpSlate-200 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <a href="https://github.com/Swasti-jain16?tab=repositories" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded border border-corpSlate-200 flex items-center justify-center text-corpSlate-600"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/swasti-jain-576506259" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded border border-corpSlate-200 flex items-center justify-center text-corpSlate-600"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.codechef.com/users/swasti_105jain" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded border border-corpSlate-200 flex items-center justify-center text-corpSlate-600"><i class="fas fa-code"></i></a>
+        </div>
+        <a href="cv.pdf" target="_blank" class="px-3.5 py-1.5 text-xs font-semibold rounded bg-corpPurple-deep text-white flex items-center space-x-1.5">
+          <i class="fas fa-file-pdf"></i>
+          <span>Download CV</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN SINGLE-PAGE CONTENT WRAPPER -->
+  <main class="space-y-24 py-8">
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 md:pt-14 pb-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Corporate Status Pill -->
+          <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-corpPurple-light border border-corpPurple-border text-corpPurple-deep text-xs font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-corpPurple-dark animate-pulse"></span>
+            <span>Technology Applicant · Class of 2028 · 8.44 CGPA</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-corpNavy tracking-tight leading-tight">
+            Hi, I'm <span class="text-corpPurple-dark">Swasti Paras Jain</span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="text-lg sm:text-xl font-semibold text-corpSlate-700">
+            BTech Engineering Student <span class="text-corpPurple-dark">|</span> Aspiring Software Developer <span class="text-corpPurple-dark">|</span> Problem Solver
+          </p>
+
+          <!-- Short Introduction -->
+          <p class="text-base sm:text-lg text-corpSlate-600 leading-relaxed max-w-2xl">
+            I am a BTech engineering student passionate about software development, problem solving and building practical technology solutions. I continuously learn new technologies and apply them through projects, coding challenges and hackathons.
+          </p>
+
+          <!-- Action CTA Buttons -->
+          <div class="pt-2 flex flex-wrap items-center gap-3.5">
+            <a href="#projects" class="px-6 py-3 rounded-lg bg-corpPurple-dark hover:bg-corpPurple-deep text-white text-sm font-semibold flex items-center space-x-2 shadow-sm hover:shadow transition transform hover:-translate-y-0.5">
+              <span>View My Projects</span>
+              <i class="fas fa-arrow-down text-xs"></i>
+            </a>
+
+            <!-- Direct Download CV Button -->
+            <a href="cv.pdf" target="_blank" class="px-6 py-3 rounded-lg bg-corpPurple-dark hover:bg-corpPurple-deep text-white text-sm font-semibold flex items-center space-x-2 shadow-sm hover:shadow transition transform hover:-translate-y-0.5">
+              <i class="fas fa-file-pdf"></i>
+              <span>Download CV</span>
+            </a>
+
+            <!-- On-Page Preview CV Button -->
+            <button onclick="openPdfModal()" class="px-5 py-3 rounded-lg bg-white border border-corpSlate-300 hover:border-corpPurple text-corpNavy hover:text-corpPurple-deep text-sm font-semibold flex items-center space-x-2 shadow-sm transition transform hover:-translate-y-0.5">
+              <i class="fas fa-eye text-corpPurple-dark"></i>
+              <span>Preview CV</span>
+            </button>
+
+            <a href="https://github.com/Swasti-jain16?tab=repositories" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-lg bg-corpSlate-50 hover:bg-corpSlate-100 border border-corpSlate-200 text-corpSlate-700 hover:text-corpNavy text-sm font-semibold flex items-center space-x-2 transition">
+              <i class="fab fa-github text-base"></i>
+              <span>GitHub</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/swasti-jain-576506259" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-lg bg-corpSlate-50 hover:bg-corpSlate-100 border border-corpSlate-200 text-corpSlate-700 hover:text-corpNavy text-sm font-semibold flex items-center space-x-2 transition">
+              <i class="fab fa-linkedin text-base text-blue-600"></i>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="https://www.codechef.com/users/swasti_105jain" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-lg bg-corpSlate-50 hover:bg-corpSlate-100 border border-corpSlate-200 text-corpSlate-700 hover:text-corpNavy text-sm font-semibold flex items-center space-x-2 transition">
+              <i class="fas fa-code text-base text-amber-600"></i>
+              <span>CodeChef</span>
+            </a>
+          </div>
+
+          <!-- Quick Contact Strip -->
+          <div class="pt-4 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-corpSlate-500 font-medium border-t border-corpSlate-200">
+            <span class="flex items-center space-x-2">
+              <i class="fas fa-map-marker-alt text-corpPurple-dark"></i>
+              <span>Shirpur, Dhule, Maharashtra, India</span>
+            </span>
+            <span class="flex items-center space-x-2 cursor-pointer hover:text-corpPurple-dark transition" onclick="copyToClipboard('swastij166@gmail.com')">
+              <i class="fas fa-envelope text-corpPurple-dark"></i>
+              <span>swastij166@gmail.com</span>
+              <i class="fas fa-copy text-[10px] text-corpSlate-400"></i>
+            </span>
+            <span class="flex items-center space-x-2 cursor-pointer hover:text-corpPurple-dark transition" onclick="copyToClipboard('+919923402456')">
+              <i class="fas fa-phone text-corpPurple-dark"></i>
+              <span>+91 9923402456</span>
+              <i class="fas fa-copy text-[10px] text-corpSlate-400"></i>
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Column: Corporate Profile Card / Placeholder -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="w-full max-w-md bg-white border border-corpSlate-200 rounded-2xl p-6 sm:p-7 shadow-sm space-y-6 relative hover:border-corpPurple-border transition">
+            
+            <!-- Top Status Bar -->
+            <div class="flex items-center justify-between pb-4 border-b border-corpSlate-100">
+              <span class="inline-flex items-center space-x-2 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <span>Ready for Recruitment</span>
+              </span>
+              <span class="text-xs font-mono-code text-corpSlate-400">RCPIT · B.Tech CE</span>
+            </div>
+
+            <!-- Profile Avatar Placeholder -->
+            <div class="flex items-center space-x-5">
+              <div class="relative">
+                <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-corpPurple-dark to-corpPurple flex items-center justify-center text-white shadow-md">
+                  <span class="font-bold text-2xl tracking-wider">SPJ</span>
+                </div>
+                <div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-white border-2 border-white shadow flex items-center justify-center">
+                  <i class="fas fa-check-circle text-emerald-500 text-xs"></i>
+                </div>
+              </div>
+              <div>
+                <h2 class="font-bold text-lg text-corpNavy">Swasti Paras Jain</h2>
+                <p class="text-xs text-corpSlate-500">B.Tech Computer Engineering</p>
+                <p class="text-xs font-semibold text-corpPurple-dark mt-0.5">R.C. Patel Institute of Tech, Shirpur</p>
+                <p class="text-[11px] text-corpSlate-400">Expected Graduation: 2028 (3rd Year)</p>
+              </div>
+            </div>
+
+            <!-- Recruiter Key Snapshot Metrics -->
+            <div class="grid grid-cols-2 gap-3 pt-1">
+              <div class="p-3 rounded-lg bg-corpSlate-50 border border-corpSlate-200">
+                <span class="text-[11px] font-medium text-corpSlate-500 block">Engineering CGPA</span>
+                <span class="text-base font-bold text-corpNavy">8.44 <span class="text-xs font-normal text-corpSlate-500">/ 10</span></span>
+              </div>
+              <div class="p-3 rounded-lg bg-corpSlate-50 border border-corpSlate-200">
+                <span class="text-[11px] font-medium text-corpSlate-500 block">10th SSC Score</span>
+                <span class="text-base font-bold text-corpNavy">97.20%</span>
+              </div>
+              <div class="p-3 rounded-lg bg-corpSlate-50 border border-corpSlate-200">
+                <span class="text-[11px] font-medium text-corpSlate-500 block">CodeChef Practice</span>
+                <span class="text-base font-bold text-corpPurple-dark">1000+ Problems</span>
+              </div>
+              <div class="p-3 rounded-lg bg-corpSlate-50 border border-corpSlate-200">
+                <span class="text-[11px] font-medium text-corpSlate-500 block">Hackathons</span>
+                <span class="text-base font-bold text-corpNavy">SIH & College Finalist</span>
+              </div>
+            </div>
+
+            <!-- Leadership Role Badge -->
+            <div class="p-3 rounded-lg bg-corpPurple-light/70 border border-corpPurple-border flex items-center space-x-3">
+              <i class="fas fa-users-gear text-corpPurple-deep text-base"></i>
+              <div>
+                <span class="text-xs font-bold text-corpPurple-deep block">Alumni Connect Representative</span>
+                <span class="text-[11px] text-corpSlate-600 block">Training & Placement Club, RCPIT</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="corp-card p-7 sm:p-10 border-l-4 border-l-corpPurple-dark">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <div class="lg:col-span-8 space-y-5">
+            <div class="space-y-1">
+              <span class="text-xs font-semibold text-corpPurple-dark uppercase tracking-wider">Professional Profile</span>
+              <h2 class="text-2xl sm:text-3xl font-bold text-corpNavy">About Me</h2>
+            </div>
+
+            <p class="text-base text-corpSlate-600 leading-relaxed">
+              I am a BTech Computer Engineering student at <strong class="text-corpNavy font-semibold">R.C. Patel Institute of Technology, Shirpur</strong> with an expected graduation in <strong class="text-corpNavy font-semibold">2028</strong> (currently in 3rd year). I am passionate about software development, practical problem solving, and building robust, real-world technology applications.
+            </p>
+
+            <p class="text-base text-corpSlate-600 leading-relaxed">
+              I am currently learning and continuously improving my skills in <strong class="text-corpNavy font-semibold">Java, JavaScript, HTML, CSS, and MongoDB</strong>, complemented by core coursework in Data Structures & Algorithms, Object-Oriented Programming (OOP), Database Management Systems (DBMS), and Operating Systems.
+            </p>
+
+            <p class="text-base text-corpSlate-600 leading-relaxed">
+              I actively take part in competitive programming and college-level hackathons, collaborating in teams to transform ideas into working prototypes under rigorous deadlines. Driven by curiosity and a commitment to continuous learning, I seek opportunities to contribute to dynamic software engineering teams.
+            </p>
+
+            <!-- Quick Bullets -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="flex items-start space-x-2.5">
+                <i class="fas fa-check text-corpPurple-dark text-xs mt-1"></i>
+                <span class="text-xs text-corpSlate-600"><strong>Academic Track:</strong> 8.44 CGPA & 97.20% in SSC</span>
+              </div>
+              <div class="flex items-start space-x-2.5">
+                <i class="fas fa-check text-corpPurple-dark text-xs mt-1"></i>
+                <span class="text-xs text-corpSlate-600"><strong>Continuous Learning:</strong> Apna College Sigma 10 Batch Certified</span>
+              </div>
+              <div class="flex items-start space-x-2.5">
+                <i class="fas fa-check text-corpPurple-dark text-xs mt-1"></i>
+                <span class="text-xs text-corpSlate-600"><strong>Leadership:</strong> Training & Placement Alumni Connect Rep</span>
+              </div>
+              <div class="flex items-start space-x-2.5">
+                <i class="fas fa-check text-corpPurple-dark text-xs mt-1"></i>
+                <span class="text-xs text-corpSlate-600"><strong>Application Focus:</strong> Software Engineering & Technology Roles</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Core Strengths Box -->
+          <div class="lg:col-span-4 bg-corpSlate-50 rounded-xl p-6 border border-corpSlate-200 space-y-4">
+            <h3 class="font-bold text-sm text-corpNavy flex items-center space-x-2">
+              <i class="fas fa-award text-corpPurple-dark"></i>
+              <span>Core Strengths & Attributes</span>
+            </h3>
+
+            <div class="space-y-2.5 text-xs text-corpSlate-600">
+              <div class="p-2.5 rounded bg-white border border-corpSlate-200 flex items-center justify-between">
+                <span class="font-semibold text-corpNavy">Quick Learner</span>
+                <span class="text-[11px] text-corpPurple-dark font-medium">Fast technology adoption</span>
+              </div>
+              <div class="p-2.5 rounded bg-white border border-corpSlate-200 flex items-center justify-between">
+                <span class="font-semibold text-corpNavy">Teamwork & Collaboration</span>
+                <span class="text-[11px] text-corpPurple-dark font-medium">Hackathons & Projects</span>
+              </div>
+              <div class="p-2.5 rounded bg-white border border-corpSlate-200 flex items-center justify-between">
+                <span class="font-semibold text-corpNavy">Structured Problem Solving</span>
+                <span class="text-[11px] text-corpPurple-dark font-medium">Algorithmic analysis</span>
+              </div>
+              <div class="p-2.5 rounded bg-white border border-corpSlate-200 flex items-center justify-between">
+                <span class="font-semibold text-corpNavy">Communication & Presentation</span>
+                <span class="text-[11px] text-corpPurple-dark font-medium">Event Anchor & Alumni Rep</span>
+              </div>
+              <div class="p-2.5 rounded bg-white border border-corpSlate-200 flex items-center justify-between">
+                <span class="font-semibold text-corpNavy">Adaptability & Agility</span>
+                <span class="text-[11px] text-corpPurple-dark font-medium">Rapid prototyping</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 2. TECHNICAL SKILLS SECTION -->
+    <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-2 mb-8">
+        <span class="text-xs font-semibold text-corpPurple-dark uppercase tracking-wider">Technical Capabilities</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-corpNavy">Skills & Competencies</h2>
+        <p class="text-sm text-corpSlate-500">Grouped into core engineering domains based on technical coursework and practical applications.</p>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Programming Languages -->
+        <div class="corp-card p-6 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 rounded-lg bg-corpPurple-light text-corpPurple-dark flex items-center justify-center">
+              <i class="fas fa-terminal text-sm"></i>
+            </div>
+            <h3 class="font-bold text-base text-corpNavy">Programming</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">Java</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">JavaScript</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">C</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">Python</span>
+          </div>
+          <p class="text-xs text-corpSlate-500 pt-2 border-t border-corpSlate-100">
+            Object-oriented and algorithmic development in Java, alongside scripting and dynamic logic in JavaScript and Python.
+          </p>
+        </div>
+
+        <!-- Web Development -->
+        <div class="corp-card p-6 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 rounded-lg bg-blue-50 text-corpBlue flex items-center justify-center">
+              <i class="fas fa-layer-group text-sm"></i>
+            </div>
+            <h3 class="font-bold text-base text-corpNavy">Web Development</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">HTML</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">CSS</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">JavaScript</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">React.js</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">Node.js</span>
+          </div>
+          <p class="text-xs text-corpSlate-500 pt-2 border-t border-corpSlate-100">
+            Building responsive user interfaces, DOM manipulation, component architecture, and modern styles.
+          </p>
+        </div>
+
+        <!-- Database -->
+        <div class="corp-card p-6 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <i class="fas fa-database text-sm"></i>
+            </div>
+            <h3 class="font-bold text-base text-corpNavy">Database</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">MongoDB</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">MySQL</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">SQL Queries</span>
+          </div>
+          <p class="text-xs text-corpSlate-500 pt-2 border-t border-corpSlate-100">
+            Experience with NoSQL document models (MongoDB) and relational database management (MySQL / SQL).
+          </p>
+        </div>
+
+        <!-- Tools -->
+        <div class="corp-card p-6 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+              <i class="fas fa-wrench text-sm"></i>
+            </div>
+            <h3 class="font-bold text-base text-corpNavy">Tools</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">VS Code</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">Git</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">GitHub</span>
+          </div>
+          <p class="text-xs text-corpSlate-500 pt-2 border-t border-corpSlate-100">
+            Proficient with version control, Git branching workflows, collaborative GitHub repositories, and modern IDEs.
+          </p>
+        </div>
+
+        <!-- Other / Core Concepts -->
+        <div class="corp-card p-6 space-y-4 md:col-span-2">
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+              <i class="fas fa-cubes text-sm"></i>
+            </div>
+            <h3 class="font-bold text-base text-corpNavy">Other / Core Concepts</h3>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <span class="px-3 py-1.5 rounded-md bg-corpPurple-light text-corpPurple-deep text-xs font-semibold border border-corpPurple-border">Data Structures & Algorithms</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpPurple-light text-corpPurple-deep text-xs font-semibold border border-corpPurple-border">Problem Solving</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">OOP (Object-Oriented Programming)</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">DBMS</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">Operating Systems</span>
+            <span class="px-3 py-1.5 rounded-md bg-corpSlate-100 text-corpSlate-700 text-xs font-semibold border border-corpSlate-200">Basic Machine Learning</span>
+          </div>
+          <p class="text-xs text-corpSlate-500 pt-2 border-t border-corpSlate-100">
+            Strong foundation in algorithmic analysis, complexity optimization, object-oriented software engineering, and operating system principles.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 3. PROJECTS SECTION -->
+    <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-2 mb-8">
+        <span class="text-xs font-semibold text-corpPurple-dark uppercase tracking-wider">Practical Implementations</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-corpNavy">Projects</h2>
+        <p class="text-sm text-corpSlate-500">Key applications developed with source code and GitHub links.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- PROJECT 1: SIH Vernacular Platform (Featured) -->
+        <div class="corp-card p-6 sm:p-7 space-y-5 flex flex-col justify-between border-t-4 border-t-corpPurple-dark md:col-span-2 bg-gradient-to-br from-white to-corpSlate-50">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded bg-corpPurple-light text-corpPurple-deep text-xs font-bold border border-corpPurple-border">
+                <i class="fas fa-trophy mr-1.5"></i>Smart India Hackathon (SIH) · Cleared 2 Rounds
+              </span>
+              <span class="text-xs font-semibold text-corpSlate-500">Team Innovation Project</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-corpNavy mb-2">
+              AI-Powered Hindi-to-Santhali Vernacular Language Platform – SIH
+            </h3>
+
+            <p class="text-sm text-corpSlate-600 leading-relaxed mb-4">
+              Developed an AI-powered vernacular language solution to bridge the communication gap between Hindi and Santhali, supporting tribal communities in Jharkhand. The project focuses on AI-based language translation and speech/text interaction to make digital information more accessible in Santhali. Cleared two rounds of Smart India Hackathon (SIH) with the team.
+            </p>
+
+            <!-- Tech Pills -->
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2.5 py-1 rounded bg-white text-corpNavy text-xs font-medium border border-corpSlate-200">AI/ML</span>
+              <span class="px-2.5 py-1 rounded bg-white text-corpNavy text-xs font-medium border border-corpSlate-200">NLP</span>
+              <span class="px-2.5 py-1 rounded bg-white text-corpNavy text-xs font-medium border border-corpSlate-200">Speech-to-Text</span>
+              <span class="px-2.5 py-1 rounded bg-white text-corpNavy text-xs font-medium border border-corpSlate-200">Text-to-Speech</span>
+              <span class="px-2.5 py-1 rounded bg-white text-corpNavy text-xs font-medium border border-corpSlate-200">React.js</span>
+            </div>
+
+            <!-- Highlights -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 p-3.5 bg-white rounded-lg border border-corpSlate-200 text-xs">
+              <div>
+                <span class="font-bold text-corpNavy block">Social Impact</span>
+                <span class="text-corpSlate-500">Bridging digital divide for tribal communities</span>
+              </div>
+              <div>
+                <span class="font-bold text-corpNavy block">Core Modality</span>
+                <span class="text-corpSlate-500">Speech-to-Text & Text-to-Speech translation</span>
+              </div>
+              <div>
+                <span class="font-bold text-corpNavy block">National Hackathon</span>
+                <span class="text-corpSlate-500">Cleared Round 1 & Round 2 at SIH</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-corpSlate-200 flex flex-wrap items-center gap-3">
+            <a href="https://github.com/Swasti-jain16?tab=repositories" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-corpSlate-100 hover:bg-corpSlate-200 text-corpSlate-700 text-xs font-semibold flex items-center space-x-2 transition border border-corpSlate-200">
+              <i class="fab fa-github"></i>
+              <span>View on GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: Simple Calculator -->
+        <div class="corp-card p-6 space-y-4 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-corpSlate-500 uppercase tracking-wider">Frontend Application</span>
+              <span class="text-[11px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-mono-code">JavaScript</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-corpNavy">Simple Calculator</h3>
+            <p class="text-xs text-corpSlate-600 leading-relaxed mt-2">
+              A responsive calculator application demonstrating frontend development, event handling and JavaScript logic.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mt-4">
+              <span class="px-2 py-0.5 rounded bg-corpSlate-100 text-corpSlate-700 text-xs">HTML</span>
+              <span class="px-2 py-0.5 rounded bg-corpSlate-100 text-corpSlate-700 text-xs">CSS</span>
+              <span class="px-2 py-0.5 rounded bg-corpSlate-100 text-corpSlate-700 text-xs">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-corpSlate-100 flex items-center gap-3">
+            <a href="https://github.com/Swasti-jain16?tab=repositories" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg border border-corpSlate-200 hover:border-corpPurple text-xs font-semibold text-corpSlate-700 hover:text-corpPurple-dark flex items-center space-x-1.5 transition">
+              <i class="fab fa-github"></i>
+              <span>View on GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: To-Do List -->
+        <div class="corp-card p-6 space-y-4 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-semibold text-corpSlate-500 uppercase tracking-wider">Task Management</span>
+              <span class="text-[11px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-mono-code">JavaScript</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-corpNavy">To-Do List</h3>
+            <p class="text-xs text-corpSlate-600 leading-relaxed mt-2">
+              A simple task management application that allows users to add, manage and organize daily tasks.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mt-4">
+              <span class="px-2 py-0.5 rounded bg-corpSlate-100 text-corpSlate-700 text-xs">HTML</span>
+              <span class="px-2 py-0.5 rounded bg-corpSlate-100 text-corpSlate-700 text-xs">CSS</span>
+              <span class="px-2 py-0.5 rounded bg-corpSlate-100 text-corpSlate-700 text-xs">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-corpSlate-100 flex items-center gap-3">
+            <a href="https://github.com/Swasti-jain16?tab=repositories" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg border border-corpSlate-200 hover:border-corpPurple text-xs font-semibold text-corpSlate-700 hover:text-corpPurple-dark flex items-center space-x-1.5 transition">
+              <i class="fab fa-github"></i>
+              <span>View on GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: Tic Tac Toe -->
+        <div class="corp-card p-6 space-y-4 flex flex-col justify-between md:col-span-2">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div class="flex items-center space-x-2 mb-2">
+                <span class="text-xs font-semibold text-corpSlate-500 uppercase tracking-wider">Interactive Web Game</span>
+                <span class="text-[11px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-mono-code">Game Logic</span>
+              </div>
+
+              <h3 class="text-lg font-bold text-corpNavy">Tic Tac Toe</h3>
+              <p class="text-xs text-corpSlate-600 leading-relaxed mt-1 max-w-2xl">
+                An interactive browser-based Tic Tac Toe game demonstrating JavaScript game logic, DOM manipulation and user interaction.
+              </p>
+
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 rounded bg-corpSlate-100 text-corpSlate-700 text-xs">HTML</span>
+                <span class="px-2 py-0.5 rounded bg-corpSlate-100 text-corpSlate-700 text-xs">CSS</span>
+                <span class="px-2 py-0.5 rounded bg-corpSlate-100 text-corpSlate-700 text-xs">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="flex-shrink-0">
+              <a href="https://github.com/Swasti-jain16?tab=repositories" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg border border-corpSlate-200 hover:border-corpPurple text-xs font-semibold text-corpSlate-700 hover:text-corpPurple-dark flex items-center space-x-2 transition">
+                <i class="fab fa-github"></i>
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 6. HACKATHONS & INNOVATION SECTION -->
+    <section id="hackathons" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="corp-card p-7 sm:p-10 bg-corpSlate-50 border border-corpSlate-200">
+        <div class="space-y-2 mb-8">
+          <span class="text-xs font-semibold text-corpPurple-dark uppercase tracking-wider">Competitive Engineering</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-corpNavy">Hackathons & Innovation</h2>
+          <p class="text-sm text-corpSlate-600 max-w-3xl leading-relaxed">
+            Participated in a college-level hackathon where 40 teams were selected from 180 participating teams for Round 2.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          
+          <!-- SIH Card -->
+          <div class="bg-white p-6 rounded-xl border border-corpSlate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded bg-corpPurple-light text-corpPurple-deep text-xs font-bold">Smart India Hackathon (SIH)</span>
+              <span class="text-xs font-bold text-emerald-600">Cleared 2 Rounds</span>
+            </div>
+            <h3 class="font-bold text-base text-corpNavy">AI-Powered Vernacular Platform for Tribal Communities</h3>
+            <p class="text-xs text-corpSlate-600 leading-relaxed">
+              Collaborated in a multidisciplinary team to architect and engineer an AI speech/text translation pipeline between Hindi and Santhali, successfully clearing two evaluation rounds.
+            </p>
+          </div>
+
+          <!-- College Hackathon Card -->
+          <div class="bg-white p-6 rounded-xl border border-corpSlate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded bg-blue-50 text-blue-700 text-xs font-bold">College-Level Hackathon</span>
+              <span class="text-xs font-bold text-blue-600">Round 2 Qualifier (Top 22%)</span>
+            </div>
+            <h3 class="font-bold text-base text-corpNavy">180 Participating Teams · Top 40 Selected</h3>
+            <p class="text-xs text-corpSlate-600 leading-relaxed">
+              Selected for Round 2 of a competitive college hackathon where only 40 teams qualified out of 180 participating teams, building technology-based practical solutions under time constraints.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- 5 Key Hackathon Pillars -->
+        <div class="border-t border-corpSlate-200 pt-6">
+          <h3 class="text-xs font-bold text-corpNavy uppercase tracking-wider mb-4">Core Focus Areas</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 text-center">
+            <div class="p-3 bg-white rounded-lg border border-corpSlate-200">
+              <i class="fas fa-users text-corpPurple-dark text-lg mb-1 block"></i>
+              <span class="text-xs font-semibold text-corpNavy block">Teamwork</span>
+              <span class="text-[10px] text-corpSlate-500">Collaborative mindset</span>
+            </div>
+            <div class="p-3 bg-white rounded-lg border border-corpSlate-200">
+              <i class="fas fa-brain text-corpBlue text-lg mb-1 block"></i>
+              <span class="text-xs font-semibold text-corpNavy block">Problem Solving</span>
+              <span class="text-[10px] text-corpSlate-500">Root-cause analysis</span>
+            </div>
+            <div class="p-3 bg-white rounded-lg border border-corpSlate-200">
+              <i class="fas fa-bolt text-amber-500 text-lg mb-1 block"></i>
+              <span class="text-xs font-semibold text-corpNavy block">Rapid Prototyping</span>
+              <span class="text-[10px] text-corpSlate-500">Fast MVP delivery</span>
+            </div>
+            <div class="p-3 bg-white rounded-lg border border-corpSlate-200">
+              <i class="fas fa-chalkboard-user text-emerald-600 text-lg mb-1 block"></i>
+              <span class="text-xs font-semibold text-corpNavy block">Presentation</span>
+              <span class="text-[10px] text-corpSlate-500">Clear communication</span>
+            </div>
+            <div class="p-3 bg-white rounded-lg border border-corpSlate-200 col-span-2 sm:col-span-1">
+              <i class="fas fa-laptop-file text-indigo-600 text-lg mb-1 block"></i>
+              <span class="text-xs font-semibold text-corpNavy block">Tech Solutions</span>
+              <span class="text-[10px] text-corpSlate-500">Practical impact</span>
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-corpSlate-50 border-t border-corpSlate-200 mt-20 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-corpSlate-500">
+      
+      <div class="text-center md:text-left">
+        <p class="font-semibold text-corpNavy text-sm">Swasti Paras Jain</p>
+        <p class="font-medium text-corpSlate-600 mt-0.5">© 2026 Swasti Paras Jain. Built with passion for technology.</p>
+        <p class="text-[11px] text-corpSlate-400">BTech Computer Engineering · R.C. Patel Institute of Technology, Shirpur</p>
+      </div>
+
+      <!-- Quick Contact and Social -->
+      <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-medium">
+        <a href="mailto:swastij166@gmail.com" class="hover:text-corpPurple-dark transition flex items-center space-x-1.5">
+          <i class="fas fa-envelope text-corpPurple-dark"></i>
+          <span>swastij166@gmail.com</span>
+        </a>
+        <a href="tel:+919923402456" class="hover:text-corpPurple-dark transition flex items-center space-x-1.5">
+          <i class="fas fa-phone text-corpPurple-dark"></i>
+          <span>+91 9923402456</span>
+        </a>
+        <a href="https://www.linkedin.com/in/swasti-jain-576506259" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition flex items-center space-x-1">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Swasti-jain16?tab=repositories" target="_blank" rel="noopener noreferrer" class="hover:text-corpNavy transition flex items-center space-x-1">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.codechef.com/users/swasti_105jain" target="_blank" rel="noopener noreferrer" class="hover:text-amber-600 transition flex items-center space-x-1">
+          <i class="fas fa-code"></i>
+          <span>CodeChef</span>
+        </a>
+      </div>
+
+      <!-- Section Navigation & Download CV -->
+      <div class="flex items-center space-x-5">
+        <a href="#about" class="hover:text-corpPurple-dark transition">About</a>
+        <a href="#skills" class="hover:text-corpPurple-dark transition">Skills</a>
+        <a href="#projects" class="hover:text-corpPurple-dark transition">Projects</a>
+        <a href="#hackathons" class="hover:text-corpPurple-dark transition">Hackathons</a>
+        <a href="cv.pdf" target="_blank" class="px-3 py-1.5 rounded bg-corpPurple-deep text-white font-semibold hover:bg-corpPurple-dark transition flex items-center space-x-1.5 shadow-sm">
+          <i class="fas fa-file-pdf text-[11px]"></i>
+          <span>Download CV</span>
+        </a>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-2 rounded bg-white border border-corpSlate-200 hover:border-corpPurple text-corpSlate-600 hover:text-corpPurple-dark transition" title="Back to top">
+          <i class="fas fa-arrow-up text-xs"></i>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- CV PDF Viewer Modal -->
+  <div id="pdf-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 modal-backdrop hidden">
+    <div class="bg-white rounded-2xl shadow-2xl border border-corpSlate-200 w-full max-w-5xl h-[90vh] flex flex-col overflow-hidden animate-fade-in">
+      <div class="px-5 py-3.5 bg-corpSlate-50 border-b border-corpSlate-200 flex items-center justify-between flex-shrink-0">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded-lg bg-corpPurple-light text-corpPurple-deep flex items-center justify-center font-bold text-sm">
+            <i class="fas fa-file-pdf"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-sm text-corpNavy">Swasti Paras Jain — Resume</h3>
+            <p class="text-[11px] text-corpSlate-500">Official Computer Engineering Student CV</p>
+          </div>
+        </div>
+        <div class="flex items-center space-x-2">
+          <a href="cv.pdf" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-corpPurple-dark hover:bg-corpPurple-deep text-white text-xs font-semibold flex items-center space-x-1.5 transition shadow-sm">
+            <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+            <span>Open in New Tab</span>
+          </a>
+          <a href="cv.pdf" download="Swasti_Paras_Jain_CV.pdf" class="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center space-x-1.5 transition shadow-sm">
+            <i class="fas fa-download text-[10px]"></i>
+            <span>Save PDF</span>
+          </a>
+          <button onclick="closePdfModal()" class="w-8 h-8 rounded-lg hover:bg-corpSlate-200 text-corpSlate-500 hover:text-corpNavy flex items-center justify-center transition">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex-1 w-full bg-slate-100 p-2 overflow-hidden">
+        <iframe src="cv.pdf" class="w-full h-full rounded-lg border border-slate-300" title="Swasti Paras Jain Resume PDF"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Single-Page Script File -->
+  <script src="script.js"></script>
+</body>
+</html>
